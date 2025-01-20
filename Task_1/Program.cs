@@ -8,6 +8,7 @@ namespace Task_1
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
             //1 - Create console application that read string from user and print the same string
