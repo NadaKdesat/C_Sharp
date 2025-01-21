@@ -9,7 +9,7 @@ namespace Task_4
 {
     class Student //Creat Class
     {
-        private int studentAge;
+        private int studentAge; //field 
         public string StudentName {  get; set; } //property 
         public int StudentAge //property
         { 
