@@ -1,12 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Diagnostics;
 using System.Linq;
-using System.Net.NetworkInformation;
-using System.Runtime.ConstrainedExecution;
-using System.Security.Cryptography;
-using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,19 +8,34 @@ namespace Task_3
 {
     internal class Program
     {
-
         class Room
         {
-            public string RoomNumber;
-            public string RoomType;
-            public double PricePerNight;
-            public bool IsBooked;
-            public const string HotelName = "Grand Stay Hotel";  
-            
+            public int RoomNumber { set; get; }
+            public string RoomType { set; get; }
+            public double PricePerNight { set; get; }
+            public bool IsBooked { set; get; }
+            public const string HotelName = "Grand Stay Hotel";
+
+            public Room()
+            {
+                RoomNumber = 0;
+                RoomType = null;
+                PricePerNight = 0;
+                IsBooked = false;
+            }
+
+            public Room(int roomNumber, string roomType, double pricePerNight, bool isBooked)
+            {
+                RoomNumber = roomNumber;
+                RoomType = roomType;
+                PricePerNight = pricePerNight;
+                IsBooked = isBooked;
+            }
+
             public void InputRoomDetails()
             {
                 Console.Write("Enter Room Number: ");
-                RoomNumber = Console.ReadLine();
+                RoomNumber = int.Parse(Console.ReadLine());
 
                 Console.Write("Enter Room Type (Single, Double, Suite): ");
                 RoomType = Console.ReadLine();
@@ -102,7 +111,25 @@ namespace Task_3
             Console.Write("\n\n");
         }
 
+        //public static void jana()
+        //{
+        //    int x = 25;
+        //    bool isPrime = true;
 
+        //    for (int i = 2; i < x; i++)
+        //    {
+        //        if (x % i == 0)
+        //        {
+        //            isPrime = false;
+        //            break;
+        //        }
+        //        else
+        //        {
+        //            isPrime = true;
+        //        }
+        //    }
+        //    Console.WriteLine(isPrime);
+        //}
         public static int MaxNumber(int size)
         {
             int[] array = new int[size];
@@ -138,6 +165,7 @@ namespace Task_3
 
         static void Main(string[] args)
         {
+            ////jana();
             //1 - Write a C# program that accepts an integer and determines if the number is even or odd. Display the result.
             //Example Input: 7
             //Output: The number 7 is odd.
@@ -204,15 +232,20 @@ namespace Task_3
 
 
             //Create a Hotel Reservation System where the program manages room bookings for a hotel. Each room has the following properties:
+
             //Room Number
+
             //Room Type(e.g., Single, Double, Suite)
+
             //Price Per Night
+
             //IsBooked(whether the room is already booked or not)
+
             //HotelName = "Grand Stay Hotel";   as constant
-            //You need to:
+            //    You need to:
             //1.Create a class Room with appropriate properties.
-            //2.Allow the user to input details for at least 2 rooms.
-            //3.Then assign data to all field , then print the data .
+            //    2.Allow the user to input details for at least 2 rooms.
+            //    3.Then assign data to all field, then print the data.
 
             Room room1 = new Room();
             Room room2 = new Room();
@@ -226,5 +259,6 @@ namespace Task_3
             Console.WriteLine("\n\nRoom 2 Details:");
             room2.PrintRoomDetails();
         }
+    }
 }
-}
+
