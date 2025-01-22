@@ -23,9 +23,9 @@ namespace Task_4
                 {
                     studentAge = value;
                 }
-                else
+                else 
                 {
-                    studentAge = 18;
+                    studentAge = MinAge;
                 }
             } 
         }  
@@ -110,13 +110,4 @@ namespace Task_4
     //8-What is encapsulation
     //Encapsulation is the practice of restricting access to certain parts of an object
     //and bundling data with methods to protect it from unauthorized access.
-
-
-
-
-
-
-
-
-
 }
