@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Task_5
 {
     //sealed 
-    class Vehicle
+     class Vehicle
     {
         public string Brand { get; set; }
         public string Model { get; set; }
