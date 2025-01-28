@@ -87,13 +87,13 @@ namespace Task_7
                     string[] userData = user.Split(' ');
                     if (name.Text == userData[0] && !string.IsNullOrEmpty(name.Text))
                     {
-                        user_exists.Text = "This username is already taken. Please choose another one.";
+                        user_exists.Text = "This username is already taken.";
                         user_exists.Visible = true;
                         return;
                     }
                     else if (email.Text == userData[1] && !string.IsNullOrEmpty(email.Text))
                     {
-                        user_exists.Text = "This email is already registered. Please use a different email.";
+                        user_exists.Text = "This email is already registered.";
                         user_exists.Visible = true;
                         return;
                     }

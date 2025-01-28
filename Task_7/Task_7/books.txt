@@ -1,1 +1,2 @@
-﻿1 book1 book 1
+1 book1 Type 1
+2 book2 Kind 1
