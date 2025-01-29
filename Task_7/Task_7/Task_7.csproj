@@ -80,7 +80,9 @@
     <Content Include="meetings_page.aspx" />
     <Content Include="Sign_up_page.aspx" />
     <Content Include="student_page.aspx" />
+    <Content Include="user.txt" />
     <Content Include="users.txt" />
+    <Content Include="user_profil.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +156,13 @@
     </Compile>
     <Compile Include="student_page.aspx.designer.cs">
       <DependentUpon>student_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user_profil.aspx.cs">
+      <DependentUpon>user_profil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user_profil.aspx.designer.cs">
+      <DependentUpon>user_profil.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

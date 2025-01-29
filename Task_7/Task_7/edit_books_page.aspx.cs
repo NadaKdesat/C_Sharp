@@ -76,13 +76,6 @@ namespace Task_7
                 string[] bookDetails = book.Split(' ');
                 if (bookDetails[0] == bookIdSearch.Text)
                 {
-                    //if (string.IsNullOrEmpty(bookId.Text) || string.IsNullOrEmpty(bookName.Text) || string.IsNullOrEmpty(bookType.Text) || string.IsNullOrEmpty(bookLevel.Text))
-                    //{
-                    //    msg.Text = "Please Fill The Feilds.";
-                    //    msg.Visible = true;
-                    //    return;
-                    //}
-
                     bookDetails[0] = bookId.Text;
 
                     bookDetails[1] = bookName.Text;

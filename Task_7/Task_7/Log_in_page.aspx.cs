@@ -32,12 +32,24 @@ namespace Task_7
                 string[] userData = user.Split(' ');
                 if (email.Text == userData[1] && password.Text == userData[2])
                 {
-                    Response.Redirect("student_page.aspx");
+                    
+                    string file2 = Server.MapPath("user.txt");
+                    if (!File.Exists(file2))
+                    {
+                        File.Create(file2);
+                    }
+                    using (StreamWriter sw = new StreamWriter(file2, false))
+                    {
+                        sw.WriteLine($"{userData[0]} {userData[1]} {userData[2]}");
+                    }
+                    Response.Redirect("user_profil.aspx");
                 }
             }
-            result.Text = "Invalid username or password ";
+            result.Text = "Invalid username or password";
             result.Visible = true;
 
+
+            
 
         }
     }

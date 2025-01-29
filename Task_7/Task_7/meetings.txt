@@ -1,1 +1,1 @@
-2 room2 ll 20
+3 room2 ll 20
