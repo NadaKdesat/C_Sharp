@@ -8,7 +8,10 @@ namespace Task_7
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (!IsPostBack) 
+            {
+                LoadUserData();
+            }
         }
 
         private void LoadUserData()
