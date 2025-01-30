@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Web.UI;
+using System.Xml.Linq;
 
 namespace Task_7
 {
@@ -63,7 +64,7 @@ namespace Task_7
                     if (email.Text == userData[1])
                     {
                         users[i] = $"{userName.Text} {userData[1]} {userData[2]} {userPhone.Text} {userAge.Text} {userAddress.Text}";
-                        name.Text = userData[0];
+                        name.Text = userName.Text;
                         email.Text = userData[1];
                         phone.Text = userPhone.Text;
                         age.Text = userAge.Text;
